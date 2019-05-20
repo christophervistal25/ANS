@@ -1,6 +1,8 @@
 package com.vistalis.numbersystem.Converter;
 
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.util.Log;
 
 import com.vistalis.numbersystem.BuildConfig;
@@ -15,6 +17,7 @@ public class Convert {
     private static final String TO = "To";
     private static final String SEPERATOR = ".";
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public Convert processor(String fromSystem, String toSystem, String value)
     {
         try {
@@ -38,15 +41,7 @@ public class Convert {
 
             this.setResult(result);
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
+        } catch (ClassNotFoundException | NoSuchMethodException  | IllegalAccessException | InvocationTargetException  | InstantiationException e ) {
             e.printStackTrace();
         }
         return this;
