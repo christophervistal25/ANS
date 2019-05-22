@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".SplashActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="100dp"
+            android:layout_width="189dp"
+            android:layout_height="152dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            tools:ignore="@null" />
+
+
+        <TextView
+            android:layout_marginTop="33dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NUMBER SYSTEM"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Everything around you is numbers"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+        
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_marginTop="33dp"
+            android:layout_width="217dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_rounded"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="START"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
