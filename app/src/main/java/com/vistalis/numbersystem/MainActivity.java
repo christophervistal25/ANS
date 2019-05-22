@@ -5,6 +5,8 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -48,6 +50,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         private EditText input;
         private TextView output;
 
+        private TabAdapter adapter;
+        private TabLayout tabLayout;
+        private ViewPager viewPager;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,38 +62,49 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setActivityToFullScreen();
         setContentView(R.layout.activity_main);
 
-        Spinner actions = findViewById(R.id.actions);
-        input = findViewById(R.id.input);
-        output = findViewById(R.id.result);
+        viewPager = findViewById(R.id.viewPager);
+        tabLayout = findViewById(R.id.tabLayout);
 
-        Button btnConvert = findViewById(R.id.btnConvert);
-        Button btnSwitch = findViewById(R.id.btnSwitch);
-        Button btnCopy = findViewById(R.id.btnCopy);
+        adapter = new TabAdapter(getSupportFragmentManager());
+        adapter.addFragment(new ConvertFragment(), "Convert Fragment");
+        adapter.addFragment(new LearnFragment(), "Learn Fragment");
+        adapter.addFragment(new FeedbackFragment(), "Feedback Fragment");
+
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+
+//        Spinner actions = findViewById(R.id.actions);
+//        input = findViewById(R.id.input);
+//        output = findViewById(R.id.result);
+//
+//        Button btnConvert = findViewById(R.id.btnConvert);
+//        Button btnSwitch = findViewById(R.id.btnSwitch);
+//        Button btnCopy = findViewById(R.id.btnCopy);
 
 
-        actions.setOnItemSelectedListener(this);
+//        actions.setOnItemSelectedListener(this);
 
         // Creating the ArrayAdapter instance having the action list.
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,listAction);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // Setting the array adapter on the Spinner.
-        actions.setAdapter(arrayAdapter);
-
-        // Display the first item in the Spinner.
-        actions.setSelection(0);
-
-        // Text changed listener for input
-        this.inputTextChangedListener();
-
-        // Method event for converting
-        this.processConvertion(btnConvert);
-
-        // Event for Vice versa of the current action.
-        this.switchAction(actions, btnSwitch, arrayAdapter);
-
-        // Add event for copy to clipboard
-        this.copyClipboard(btnCopy);
+//
+//        // Setting the array adapter on the Spinner.
+//        actions.setAdapter(arrayAdapter);
+//
+//        // Display the first item in the Spinner.
+//        actions.setSelection(0);
+//
+//        // Text changed listener for input
+//        this.inputTextChangedListener();
+//
+//        // Method event for converting
+//        this.processConvertion(btnConvert);
+//
+//        // Event for Vice versa of the current action.
+//        this.switchAction(actions, btnSwitch, arrayAdapter);
+//
+//        // Add event for copy to clipboard
+//        this.copyClipboard(btnCopy);
 
     }
 
