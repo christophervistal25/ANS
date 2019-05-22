@@ -66,9 +66,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         tabLayout = findViewById(R.id.tabLayout);
 
         adapter = new TabAdapter(getSupportFragmentManager());
-        adapter.addFragment(new ConvertFragment(), "Convert Fragment");
-        adapter.addFragment(new LearnFragment(), "Learn Fragment");
-        adapter.addFragment(new FeedbackFragment(), "Feedback Fragment");
+        adapter.addFragment(new ConvertFragment(), "Convert");
+        adapter.addFragment(new LearnFragment(), "Learn");
+        adapter.addFragment(new FeedbackFragment(), "Feedback");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

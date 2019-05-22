@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:background="@color/colorPrimary"
+    android:layout_height="20dp"
+    android:background="#fff"
     android:gravity="center_vertical"
     app:layout_collapseMode="pin"
     app:layout_scrollFlags="scroll|enterAlways"
     app:theme="@style/MyToolbarTheme"
-    app:title="@string/app_name"/>
+    />
