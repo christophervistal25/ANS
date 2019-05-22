@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calculate_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PlayGroundFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    >
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical"
+    >
+        <EditText
+            android:id="@+id/input"
+            android:layout_gravity="center"
+            android:layout_width="298dp"
+            android:layout_height="52dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"
+            android:hint="Enter here"
+            android:textColorHint="#fff"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="35sp"
+            android:textStyle="bold"
+        />
+
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="255dp"
+            android:layout_height="39dp"
+            android:text="@string/convert"
+            android:background="@drawable/btn_rounded_2"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="18sp"
+        />
+
+        <Spinner
+            android:id="@+id/actions"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="255dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_rounded_2"
+            android:textAlignment="center"
+        />
+
+        <Button
+            android:id="@+id/btnCopy"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="255dp"
+            android:layout_height="39dp"
+            android:text="@string/copy"
+            android:background="@drawable/btn_rounded_2"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+        />
+
+        <Button
+            android:id="@+id/btnSwitch"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="255dp"
+            android:layout_height="39dp"
+            android:text="@string/switch_text"
+            android:background="@drawable/btn_rounded_2"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+        />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
