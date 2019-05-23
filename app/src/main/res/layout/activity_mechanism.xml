@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MechanismActivity"
+    android:background="@drawable/calculate_bg"
+    android:id="@+id/mainLayout"
+    android:orientation="vertical">
+
+
+
+
+            <ImageView
+                android:id="@+id/btnBinary"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="11dp"
+                android:layout_gravity="start"
+                android:src="@drawable/binary_circle"
+                android:layout_marginLeft="11dp" />
+
+            <ImageView
+                android:id="@+id/btnHexa"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="end"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/hexa_circle"
+                android:layout_marginRight="11dp" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/btnOctal"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:src="@drawable/octal_circle" />
+
+    <ImageView
+        android:id="@+id/btnDecimal"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_gravity="end|bottom"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:src="@drawable/decimal_circle" />
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/fromSystem"
+                android:background="@drawable/round_button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="start|center_vertical"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:tag="FROM"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+                android:background="@drawable/connector" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:text="reset"
+                android:layout_gravity="center_vertical|center_horizontal"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/toSystem"
+                android:background="@drawable/round_button"
+                android:layout_marginRight="20dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginEnd="20dp"
+                android:tag="TO"
+                android:layout_gravity="end|center_vertical"
+               />
+
+
+</FrameLayout>

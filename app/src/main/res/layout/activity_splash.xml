@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/calculate_bg"
     tools:context=".SplashActivity">
 
     <LinearLayout
@@ -39,14 +39,14 @@
             android:layout_height="wrap_content"
             android:text="Everything around you is numbers"
             android:textColor="#fff"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textAlignment="center"
             />
         
         <Button
             android:id="@+id/btnStart"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="80dp"
             android:layout_width="217dp"
             android:layout_height="42dp"
             android:layout_gravity="center_horizontal"
