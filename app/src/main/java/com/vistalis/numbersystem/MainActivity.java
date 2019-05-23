@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.vistalis.numbersystem.Repositories.ArticleRepository;
+import com.vistalis.numbersystem.Adapters.TabAdapter;
 
 
 public class MainActivity extends AppCompatActivity  {

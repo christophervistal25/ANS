@@ -1,4 +1,4 @@
-package com.vistalis.numbersystem;
+package com.vistalis.numbersystem.Adapters;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,7 +14,7 @@ public class TabAdapter extends FragmentStatePagerAdapter {
     private final List<String> mFragmentTitleList = new ArrayList<>();
 
 
-    TabAdapter(FragmentManager fm) {
+    public TabAdapter(FragmentManager fm) {
         super(fm);
     }
 

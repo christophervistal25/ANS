@@ -13,7 +13,7 @@ public abstract class DB extends RoomDatabase {
 
     private static DB appDatabase;
     private Context context;
-    public abstract ArticlesDao categoryDao();
+    public abstract ArticlesDao articlesDao();
 
 
     public synchronized  static DB getInstance(Context context){

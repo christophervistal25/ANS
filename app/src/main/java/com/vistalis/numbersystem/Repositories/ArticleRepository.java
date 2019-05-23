@@ -38,7 +38,7 @@ public class ArticleRepository {
     public static void create(Context context, String title, String description)
     {
         Articles category = new Articles(title, description);
-        DB.getInstance(context).categoryDao().addArticle(category);
+        DB.getInstance(context).articlesDao().addArticle(category);
     }
 
 }
